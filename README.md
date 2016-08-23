@@ -25,3 +25,11 @@ Following is the output
 ```
 $ cf uninstall-plugin app-instances
 ```
+
+## Jenkins Usage
+```
+export APP_NAME=the-app-name
+INSTANCES=$(cf app-instances $APP_NAME)
+cf scale $APP_NAME -i $INSTANCES
+```
+
